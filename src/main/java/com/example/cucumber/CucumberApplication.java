@@ -1,13 +1,12 @@
 package com.example.cucumber;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.cucumber.core.cli.Main;
 
-@SpringBootApplication
 public class CucumberApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CucumberApplication.class, args);
-	}
-
+    public static void main(final String[] runtimeArgs) {
+        Main.main("classpath:features",
+                "--glue", "com.example.cucumber",
+                "--plugin", "pretty");
+    }
 }
