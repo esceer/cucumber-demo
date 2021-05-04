@@ -1,2 +1,14 @@
 # cucumber-demo
-POC for cucumber 6.x
+
+POC for cucumber 6.x. This sample project implements cucumber tests following two different approaches. The approaches differ where the tests are placed into:
+* `src/main`
+* `src/test`
+
+The project can be run via gradle:
+
+* `gradlew bootRun -Dcucumber.filter.tags="not @WIP"`
+* `gradlew test -Dcucumber.filter.tags="not @WIP"`
+
+Alternatively each scenario / feature file can be triggered with IntelliJ's cucumber runner plugin.
+
+In addition the POC addresses the resolution of integrating spring into cucumber step files.
