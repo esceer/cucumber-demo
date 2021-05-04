@@ -10,8 +10,8 @@ tests are placed into:
 
 The project can be run via gradle:
 
-* `gradlew bootRun -Dcucumber.filter.tags="not @WIP"`
-* `gradlew test -Dcucumber.filter.tags="not @WIP"`
+* `gradlew :cucumber-in-src-main:bootRun -Dcucumber.filter.tags="not @WIP"`
+* `gradlew :cucumber-in-src-test:test -Dcucumber.filter.tags="not @WIP"`
 
 Alternatively each scenario / feature file can be triggered with IntelliJ's cucumber runner plugin.
 
