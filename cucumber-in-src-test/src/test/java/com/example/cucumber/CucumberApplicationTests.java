@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
-@SpringBootTest
+@SpringBootTest(classes = CucumberApplicationTests.class)
 @CucumberContextConfiguration
 public class CucumberApplicationTests {
 }

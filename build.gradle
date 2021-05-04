@@ -1,33 +1,17 @@
 plugins {
-    id 'org.springframework.boot' version '2.4.5'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
+    id 'org.springframework.boot' version '2.4.5'
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
 
-repositories {
-    mavenCentral()
-}
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation "org.springframework:spring-test"
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.3'
-    implementation group: 'io.cucumber', name: 'cucumber-spring', version: '6.10.3'
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.3'
-    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.3'
-    testImplementation group: 'io.cucumber', name: 'cucumber-spring', version: '6.10.3'
-}
-
-bootRun {
-    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
-}
-
-test {
-    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+    repositories {
+        mavenCentral()
+    }
 }

@@ -10,7 +10,7 @@
       </option>
       <option name="taskNames">
         <list>
-          <option value=":bootRun" />
+          <option value=":cucumber-in-src-main:bootRun" />
         </list>
       </option>
       <option name="vmOptions" value="-Dcucumber.filter.tags=&quot;not @WIP&quot;" />
